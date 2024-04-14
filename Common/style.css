@@ -1,0 +1,47 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/* Global body */
+
+body {
+	background-color: #DDC7C7;
+	color: #2B252F;
+	font-family: Consolas, monospace;
+}
+
+	body a {
+		color: #180B49;
+	}
+		body a:hover {
+			color: #603A8F;
+		}
+	body img {
+		padding: 1em;
+	}
+		body img:hover {
+			background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(96,47,133,.2), rgba(0,0,0,0));
+		}
+
+body.empty {
+	color: black;
+	font-family: "Times New Roman", serif;
+}
+
+.data {
+	left: 11em;
+	top: 2em;
+	position: absolute;
+}
+
+
+
+body h1 {
+	padding-bottom: .5em;
+}
+
+body p {
+	padding: .5em;
+	position: relative;
+	left: 2em;
+}

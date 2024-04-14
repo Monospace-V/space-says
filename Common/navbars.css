@@ -1,0 +1,117 @@
+
+/* Global navigator */
+
+ul.navigator { /*<ul class="navigator"> */
+	list-style-type: none;
+	margin: 0;
+	padding: .5em 5em;
+	width: 8em;
+/*	background-color: #C2A9B7;*/
+	position: absolute;
+	top: 2em;
+	left: -6em;
+}
+
+	ul.navigator li {
+		text-align: center;
+		padding: .2em .3em;
+	/*	border-bottom: .15em solid #252525;*/
+	}
+		ul.navigator li:first-child {
+			border-top: none;
+		}
+		ul.navigator li:last-child {
+			border-bottom: none;
+		}
+		
+	ul.navigator a {
+		color: black;
+		padding: .5em 3em .5em 4em;
+		text-decoration: none;
+	}
+		ul.navigator a:link {
+			color:#1C2744;
+		}
+		ul.navigator a:hover {
+			padding: .35em 3em .35em 4em;
+			background-image: linear-gradient(to right, black, grey, grey, rgba(146,142,142,.5), rgba(146,142,142,0));
+			color: white;
+			opacity: .8;
+			text-decoration: underline;
+		}
+
+
+
+/* LISTING: of stuff */
+ul.listing {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	top: 2em;
+	left: 1em;
+	width: auto;
+}
+
+	ul.listing li {
+		background-image: linear-gradient(to right, white, rgba(0,0,0,0));
+		margin: 0.5em 2em;
+		padding: 0.5em 0em;
+		border-left: 1em solid black;
+	}
+	ul.listing a {
+		padding: .5em 3em .5em 1em;
+	}
+	ul.listing a:link {
+		color: #350B3E;
+	}
+	ul.listing a:hover {
+		background-image: linear-gradient(to right, #8A788E, rgba(0,0,0,0));
+		color: #4E3453;
+	}
+	ul.listing #a:hover ~8 	 ul.listing #li { /* ??????????????????? */
+		border-right: 1em solid grey;
+	}
+
+
+/* PLAN FOR DROPDOWN */
+
+
+ul.tag {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	top: 2em;
+	left: 1em;
+	width: 18em;
+}
+
+	ul.tag li {
+		background-image: linear-gradient(to right, rgba(255,255,255,.5), rgba(0,0,0,0), rgba(0,0,0,0));
+		margin: 0.5em 0.5em;
+		padding: 0.3em 0em .4em;
+		border-left: 1em solid rgba(0,0,0,.8);
+	}
+
+	ul.tag a:link {
+		color: #33051E;
+		padding-left: 0.5em;
+		padding-right: 28em;
+		padding-top: .3em;
+		padding-bottom: .4em;
+		text-decoration: none;
+	}
+	ul.tag a:hover {
+		padding: .3em 28em .4em .4em;
+		background-image: linear-gradient(to right, #876C76, rgba(0,0,0,0));
+		color: white;
+		opacity: .8;
+		text-decoration: underline;
+	}
+
+ul {
+	list-style-type: none;
+}
+ul li {
+	border-left: 1em solid black;
+	padding: 1em;
+}
