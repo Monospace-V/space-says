@@ -24,6 +24,7 @@ body {
 		}
 
 body.empty {
+	background-color: #DDC7C7;
 	color: black;
 	font-family: "Times New Roman", serif;
 }
