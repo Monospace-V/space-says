@@ -1,12 +1,13 @@
 body p {
-	padding: .5em;
+	/*padding: .5em;*/
 	position: relative;
-	left: 2em;
+	/* left: 2em;*/
 }
 
 .article {
-	left: 11em;
-	right: 11em;
+	padding: max(15%, .8em);
+	padding-top: 0;
+	right: clamp(.4em, 1%, 18em);
 	top: 2em;
 	position: absolute;
 	font-size: 102%;
@@ -35,6 +36,8 @@ body p {
 }
 
 .heading {
+	padding-left: 4em;
+	padding-right: 4em;
 	text-align: center;
 	font-size: 2em;
 }
@@ -47,6 +50,9 @@ body p {
 }
 
 .article .subtitle {
+	position: sticky;
+	padding-left: 4em;
+	padding-right: 4em;
 	padding-top: 2em;
 	padding-bottom: 4em;
 }
