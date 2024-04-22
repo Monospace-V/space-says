@@ -87,7 +87,7 @@ start="""<!DOCTYPE html>
 mid="""
 	</head>
 	<body class="global">
-		<object data="../../Common/navigator.html"></object>
+		<div class="navigator"><object data="../../Common/navigator.html"></object></div>
 
 <div class="article">
 """
@@ -98,12 +98,13 @@ end="""
 	</body>
 </html>
 """
-
+hr="""<hr class="separator">"""
 
 with open(out,'w') as file:
     file.writelines([(start),("<title>"+title+"</title>"),(mid)])
     file.write("<div class=\"heading\">"+heading+"</div>\n")
     file.write("<div class=\"subtitle\">"+subtitle+"</div>\n\n")
+    file.write(hr+"\n")
     for para in text:
         file.write("<p>\n")
         for line in para:
