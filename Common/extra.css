@@ -20,7 +20,7 @@ body p {
 }
 
 .article img {
-	display: block;
+	display: flex;
 	position: relative;
 	margin: auto;
 }
@@ -28,7 +28,7 @@ body p {
 	text-align: center;
 	font-size: 0.8em;
 	position: relative;
-	width: 30em;
+	width: min(70%, 30em);
 	margin: auto;
 	display: block;
 	font-style: italic;
