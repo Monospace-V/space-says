@@ -4,8 +4,8 @@ body p {
 }
 
 .article {
-	right: clamp(1em, 20%, 21em);
-	left: calc(calc(max(15%, .8em) - 2em) + calc(min(4%, .3em) + min(1.5em, 5%)));
+	right: clamp(1em, 20%, 21.4em);
+	left: calc(calc(max(15%, .8em) - 1.6em) + calc(min(4%, .3em) + min(1.5em, 5%)));
 	position: relative;
 	font-size: 102%;
 	width: clamp(70%, 40em, 80%);
