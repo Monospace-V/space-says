@@ -21,4 +21,4 @@ Dynamic range and dynamic range tools are more often used in context of the audi
 
 
 The idea of high dynamics is suited to acoustic instruments on classical music, where the dynamics of the piece and instrument are vital to the playing. Playing each note at the same volume or in the same fashion would sound robotic. In this case, where actual volume and apparent volume are two different ideas even on the same instrument, dynamics include the latter more specifically, and the former only by extension.
-In the event an actual instrument is being recorded, soft notes will still give the impression of being softly played as you increase the volume to make them better audible. However, you want to be careful with this.
+In the event an actual instrument is being recorded, soft notes will still give the impression of being softly played as you increase the volume to make them better audible. Use your ears too.
