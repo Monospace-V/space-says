@@ -93,7 +93,7 @@ mid="""
 """
 
 end="""
-<p><object data="../Common/common_footer.html"></object>
+<p><object data="../../Common/common_footer.html"></object>
 </div>
 	</body>
 </html>

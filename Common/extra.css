@@ -46,17 +46,20 @@ body p {
 
 
 .subtitle {
-	text-align: center;
 	font-size: 1em;
 	font-style: italic;
-	left: 4pt;
-	text-indent: 4pt;
+	position: relative;
+	left: 56pt;
+	text-indent: -12pt;
 }
 
 .article .subtitle {
 	position: relative;
 	padding-top: 1.5em;
 	padding-bottom: 2.5em;
+	text-align: center;
+	left: 4pt;
+	text-indent: 0pt;
 }
 
 hr.separator {
@@ -68,3 +71,17 @@ hr.separator {
 	padding: 1.5em;
 }
 
+.citations {
+	font-size: 80%;
+	font-style: italic;
+	padding-top: 0em;
+	padding-bottom: 2em;
+}
+
+.citations p {
+	padding-top: .2em;
+}
+
+.citations br {
+	padding-top: .1em;
+}
