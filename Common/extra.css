@@ -10,6 +10,7 @@ body p {
 	font-size: 102%;
 	width: clamp(70%, 40em, 80%);
 	top: -8em;
+	overflow-wrap: break-word;
 }
 
 
@@ -72,6 +73,7 @@ hr.separator {
 }
 
 .citations {
+	word-break: break-all;
 	font-size: 80%;
 	font-style: italic;
 	padding-top: 0em;
