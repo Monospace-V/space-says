@@ -66,10 +66,34 @@ for para in text:
         line=para[pos]
         line=convert(line,"**","<b>") # bold
         line=convert(line,"*","<i>") # italics
+        line=convert(line,"```","<div class=\"code\">") # italics
         line=convert(line,"__","<b>",closed_trigger=False)
         line=convert(line,"_","<i>",closed_trigger=False)
         para[pos]=line
 
+
+# Formatting anchors and links.
+for para in text:
+    citation=False # default
+    for line_pos in range(len(para)):
+        line=para[line_pos]
+        for pos in range(len(line)):
+            try:
+                # Finds links and anchors them to themselves (max one link per line):
+                if (line[pos:pos+4]=="http") and ("://" in line[pos+4:pos+8]): # Find link
+                    link_end=line.find(" ",pos,-1) # returns -1 if not found, so last position anyway.
+                    if link_end==-1: line+=" " # add space to prevent anchor href cutting
+                    link=line[pos:link_end]
+                    line=line[:pos]+"<a href="+link+">"+link+"</a>"+line[link_end:]
+                    if link_end==-1: 
+                        line=line[:-1] # Remove extra space
+                        if pos==0 and citation==False: # Convert to citation: START
+                            citation=True
+                            line="<div class=\"citations\">\n"+line
+                    para[line_pos]=line
+                break
+            except: pass
+    if citation: para[line_pos]=line+"\n</div>" # CLOSE citations. only at end of para.
 
 # Add with paragraph breaks.
 
