@@ -87,3 +87,13 @@ hr.separator {
 .citations br {
 	padding-top: .1em;
 }
+
+
+.code {
+	font-family: Consolas, monospace;
+	background: rgba(128,128,128,.5);
+	display: block;
+	padding-left: .4em;
+	padding-right: .4em;
+	font-style: normal;
+}

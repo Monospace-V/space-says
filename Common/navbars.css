@@ -43,6 +43,7 @@ ul.navigator { /*<ul class="navigator"> */
 
 /* LISTING: of stuff */
 ul.listing {
+	display: block;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -51,14 +52,14 @@ ul.listing {
 	width: auto;
 }
 
-	ul.listing li {
+	ul.listing > li {
 		background-image: linear-gradient(to right, white, rgba(0,0,0,0));
 		margin: 0.5em 2em;
 		padding: 0.5em 0em;
 		border-left: 1em solid black;
 	}
 	ul.listing a {
-		padding: .5em 3em .5em 1em;
+		padding: .5em 1em .5em 1em;
 	}
 	ul.listing a:link {
 		color: #350B3E;
