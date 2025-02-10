@@ -84,7 +84,7 @@ for para in text:
                     link_end=line.find(" ",pos,-1) # returns -1 if not found, so last position anyway.
                     if link_end==-1: line+=" " # add space to prevent anchor href cutting
                     link=line[pos:link_end]
-                    line=line[:pos]+"<a href="+link+">"+link+"</a>"+line[link_end:]
+                    line=line[:pos]+"<a href=\""+link+"\">"+link+"</a>"+line[link_end:]
                     if link_end==-1: 
                         line=line[:-1] # Remove extra space
                         if pos==0 and citation==False: # Convert to citation: START
