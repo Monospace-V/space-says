@@ -25,6 +25,7 @@ In the command line, run ```gh auth login```. This will authenticate a login wit
 Now when working with repositories, when creating commits (which are logs and details of specific changes), you need a username and email address to "sign" these commits. I recommend using a username and email you are comfortable showing to the world. A real name or personal email can be traced back to you and those around you regardless of whether this is what you want.
 You can configure this either globally, or individually at each repository. I tend to do the latter.
 Note that setting global configuration is not something I typically prefer. In the event I use my personal data, I can forget, and my data can be traced back to me. In the event I'm supposed to use my personal data, I am now linked to my separate one. I configure them on a per-repository basis.
+I have since found that you can set up your noreply GitHub email (if you have GitHub setup to hide your private email) as a commit email address. I do wish I had taken advantage of it earlier.
 
 To globally configure them, in your cli run ```git config --global user.name [YOUR USERNAME]``` and ```git config --global user.email [YOUR EMAIL ADDRESS]```
 These are now the data git uses to sign commits.
@@ -119,6 +120,8 @@ Open the command line here. Run ```gh repo clone [YOUR-USERNAME]/[NAME-OF-REPO]`
 
 This will _clone the repository, setting the "origin" remote to your repository on git.
 If you are working on a forked repository this will also a remote called "upstream" referencing the parent project this was forked from (so you may base and update your fork alongside it).
+IT IS RECOMMENDED to call the remote for your fork of a repository "origin," and the original repository "upstream". You can edit these by running ```git remote set-url upstream [original repository URL]``` and ```git remote set-url origin [your fork repository URL]```.
+To this end, it may be convenient to fork a repository in the GitHub interface itself, and ```gh clone``` your fork from GitHub, so it is set up for you.
 
 **Modifying a repository:**
 
@@ -126,10 +129,11 @@ If you are working on a forked repository this will also a remote called "upstre
 
 You may create a branch using these instructions: https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github#create-a-new-branch
 A branch can be created ```git branch [branch-name]```, and use it by running ```git checkout [branch-name]``` or ```git switch [branch-name]``` to use that branch.
+To create and setup a branch in the same step, you can use ```git checkout -b [branch-name]```. This creates a local copy of your branch.
 
 It is recommended, when making changes, to create a branch, ideally with a name that describes the purpose of the specific branch, for the sake of convenience.
 
-To push this branch so it shows up on github, look at the "Pushing branches" section below.
+To push this branch so it shows up on github, look at the "Pushing branches" section below. The above instructions only change your branch locally.
 
 *Making and comitting changes:*
 
@@ -161,5 +165,6 @@ Run it as ```git push origin [branch-name]```.
 If you are working on a repository that other people may work on and change, there are several ways to keep your repository up to date with the latest master. I have a tendency to use all forms of pull and fetch.
 
 *Sync a fork:*
-Run ```git fetch upstream``` to get the latest repo from the source. Your remote for the source is probably 
+Run ```git fetch upstream``` to get the latest branch data from the source. Your remote for the original repository is probably called upstream.
 Switch to your fork's default branch on your local repository: ```git checkout [branch-name]```. In this case it's probably main.
+You can use ```git pull``` to update your local branches from the remote too. 
